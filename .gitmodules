@@ -1,0 +1,6 @@
+[submodule "dodo-github-visualization"]
+	path = dodo-github-visualization
+	url = git@github.com:fraunhofer-iem/dodo-github-visualization.git
+[submodule "dodo-database-service"]
+	path = dodo-database-service
+	url = git@github.com:fraunhofer-iem/dodo-database-service.git
