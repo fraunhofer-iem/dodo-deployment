@@ -20,7 +20,7 @@ services:
     build: ./dodo-github-visualization
     environment:
       SECRET_COOKIE_PASSWORD_FILE: /run/secrets/cookie_password
-    container_name: "simple-service"
+    container_name: "dodo-visualization"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.dodo.rule=Host(`dodo.localhost`)"
