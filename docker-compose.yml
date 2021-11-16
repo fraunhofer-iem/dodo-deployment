@@ -13,6 +13,7 @@ services:
     ports:
       - "80:80"
       - "8080:8080"
+      - "443:443"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
@@ -23,7 +24,7 @@ services:
     container_name: "dodo-visualization"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.dodo.rule=Host(`dodo.localhost`)"
+      - "traefik.http.routers.dodo.rule=PathPrefix(`/`)"
       - "traefik.http.routers.dodo.entrypoints=web"
     secrets:
       - cookie_password
