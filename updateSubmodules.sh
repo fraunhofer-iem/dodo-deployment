@@ -16,7 +16,7 @@ elif [ "$LOCAL" = "$BASE" ]; then
     git submodule update
     docker compose down
     docker compose build
-    docker compose up
+    docker compose up -d
 else
     echo "Diverged"
 fi
