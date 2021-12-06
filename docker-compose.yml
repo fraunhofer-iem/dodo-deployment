@@ -39,7 +39,8 @@ services:
       - "traefik.http.routers.db.rule=PathPrefix(`/db-service`)"
       - "traefik.http.routers.db.entrypoints=web"
     secrets:
-      - db_password    
+      - mongo_user_pw
+      - mongo_user_username 
 
   mongodb:
     image: mongo
@@ -50,6 +51,8 @@ services:
     secrets:
       - mongo_root_pw
       - mongo_root_username
+      - mongo_user_pw
+      - mongo_user_username 
 
     environment:
       - MONGO_INITDB_ROOT_USERNAME_FILE=/run/secrets/mongo_root_username
